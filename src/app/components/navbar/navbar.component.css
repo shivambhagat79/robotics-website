@@ -1,0 +1,14 @@
+.link {
+  margin-left: 40px;
+  height: 100%;
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
+}
+
+.link:hover {
+  color: #06b6d4;
+}
+
+.active {
+  color: #06b6d4;
+}
