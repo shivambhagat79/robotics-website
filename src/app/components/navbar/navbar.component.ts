@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -26,6 +26,7 @@ export class NavbarComponent implements OnInit {
       }
     });
   }
+
   onRouteChange(path: string) {
     const allLinks = document.getElementsByClassName('link');
     for (var i = 0; i < allLinks.length; i++) {

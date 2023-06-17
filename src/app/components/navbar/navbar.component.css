@@ -5,6 +5,10 @@
   transition: color 0.2s ease-in-out;
 }
 
+.scrolled {
+  background-color: #0f172a;
+}
+
 .link:hover {
   color: #06b6d4;
 }

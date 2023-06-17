@@ -20,13 +20,10 @@ import { ContactComponent } from './pages/contact/contact.component';
     GalleryComponent,
     TeamComponent,
     ProjectsComponent,
-    ContactComponent
+    ContactComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

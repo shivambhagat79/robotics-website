@@ -1,7 +1,63 @@
+.wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.header-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.header-bg {
+  transform: translateZ(-20px) scale(3.1);
+}
+
+.header-text {
+  transform: translateZ(-10px) scale(2);
+}
+
 .line {
   width: 6px;
   background-color: #06b6d4;
   height: 70px;
   margin-left: 30px;
   margin-right: 30px;
+}
+
+.header-text-flicker p {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.on {
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  text-shadow: 0px 0px 8px rgb(255, 255, 255),
+    0px 0px 20px rgba(255, 255, 255, 0.5);
+}
+.white {
+  color: white;
+}
+
+.heading-line {
+  height: 60px;
+  width: 8px;
+  background-color: #06b6d4;
 }
