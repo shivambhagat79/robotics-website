@@ -1,22 +1,57 @@
 <div
-  class="flex fixed top-0 w-full text-white px-8 lg:px-14 py-4 items-center justify-between z-50 bg-slate-950/30 backdrop-blur-xl"
+  class="fixed top-0 w-full text-white lg:px-14 py-4 z-50 bg-slate-950/30 backdrop-blur-xl"
 >
   <!-- brand -->
-  <div>
-    <div class="font-oswald uppercase text-2xl md:text-3xl font-semibold">
-      Robotics <span class="font-oswald text-cyan-500">Club</span>
+  <div class="flex justify-between items-center px-8">
+    <div>
+      <div class="font-oswald uppercase text-2xl md:text-3xl font-semibold">
+        Robotics <span class="font-oswald text-cyan-500">Club</span>
+      </div>
+      <div>IIT Ropar</div>
     </div>
-    <div>IIT Ropar</div>
+    <!-- Links -->
+    <div class="lg:flex hidden">
+      <a id="home" class="link active" routerLink="home">Home</a>
+      <a id="gallery" class="link" routerLink="gallery">Gallery</a>
+      <a id="projects" class="link" routerLink="projects">Projects</a>
+      <a id="ourTeam" class="link" routerLink="ourTeam">Our Team</a>
+      <a id="contactUs" class="link" routerLink="contactUs">Contact Us</a>
+    </div>
+    <div
+      class="menu-icon block lg:hidden hover:cursor-pointer"
+      (click)="toggleNavbar()"
+    >
+      <i class="fa-solid fa-bars text-3xl"></i>
+    </div>
   </div>
-  <!-- Links -->
-  <div class="lg:flex hidden">
-    <a id="home" class="link active" routerLink="home">Home</a>
-    <a id="gallery" class="link" routerLink="gallery">Gallery</a>
-    <a id="projects" class="link" routerLink="projects">Projects</a>
-    <a id="ourTeam" class="link" routerLink="ourTeam">Our Team</a>
-    <a id="contactUs" class="link" routerLink="contactUs">Contact Us</a>
-  </div>
-  <div class="menu-icon block lg:hidden">
-    <i class="fa-solid fa-bars text-3xl hover:cursor-pointer"></i>
+  <!-- Nabar Collapse -->
+  <div class="hidden mt-5" [ngClass]="{ open: isNavbarOpen }">
+    <div
+      id="home-collapse"
+      class="py-3 link-collapse active-collapse"
+      routerLink="home"
+    >
+      <a>Home</a>
+    </div>
+    <div id="gallery-collapse" class="py-3 link-collapse" routerLink="gallery">
+      <a>Gallery</a>
+    </div>
+    <div
+      id="projects-collapse"
+      class="py-3 link-collapse"
+      routerLink="projects"
+    >
+      <a>Projects</a>
+    </div>
+    <div id="ourTeam-collapse" class="py-3 link-collapse" routerLink="ourTeam">
+      <a>Our Team</a>
+    </div>
+    <div
+      id="contactUs-collapse"
+      class="py-3 link-collapse"
+      routerLink="contactUs"
+    >
+      <a>Contact Us</a>
+    </div>
   </div>
 </div>
