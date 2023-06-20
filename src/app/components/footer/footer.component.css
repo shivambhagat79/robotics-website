@@ -1,0 +1,18 @@
+li {
+  margin-top: 5px;
+}
+
+li a {
+  transition: all 0.2s ease-in-out;
+}
+
+li a:hover {
+  color: white;
+  margin-left: 10px;
+}
+
+.heading-line {
+  height: 60px;
+  width: 8px;
+  background-color: #06b6d4;
+}
