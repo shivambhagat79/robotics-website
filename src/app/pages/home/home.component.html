@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div id="wrapper" class="wrapper">
   <!-- Header -->
   <div class="header">
     <img
@@ -35,9 +35,18 @@
         IIT ROPAR
       </div>
     </div>
+    <!-- Scroll Button -->
+    <div
+      class="scroll-button flex items-center justify-center h-16 w-10 border border-slate-200 fixed bottom-5 left-[49%] rounded-xl hover:cursor-pointer"
+      (click)="scrollButtonClicked()"
+    >
+      <i class="fa-solid fa-angles-down text-cyan-500 text-3xl"></i>
+    </div>
   </div>
   <!-- body -->
-  <div class="bg-gray-900 w-full p-6 lg:p-14 text-white">
+
+  <div id="main-body" class="bg-gray-900 w-full p-6 lg:p-14 text-white">
+    <!-- Paragraph 1 -->
     <div class="flex items-center mb-7">
       <div class="heading-line me-5"></div>
       <h1 class="text-2xl lg:text-4xl uppercase font-semibold">
@@ -67,11 +76,22 @@
       deserunt a qui in eius quis, vel labore, distinctio quasi dolorem enim
       omnis consequuntur quaerat! Aliquid saepe assumenda nulla aperiam rem.
     </p>
-    <div class="flex items-center mb-7 mt-20">
+    <!-- Accordian Gallery -->
+    <div class="flex items-center my-7">
       <div class="heading-line me-5"></div>
-      <h1 class="text-4xl uppercase font-semibold">Lorem ipsum dolor</h1>
+      <h1 class="text-2xl lg:text-4xl uppercase font-semibold">
+        Lorem ipsum dolor
+      </h1>
     </div>
-    <p class="text-lg text-slate-300">
+    <app-accordian-gallery></app-accordian-gallery>
+    <!-- Paragraph 2 -->
+    <div class="flex items-center my-7">
+      <div class="heading-line me-5"></div>
+      <h1 class="text-2xl lg:text-4xl uppercase font-semibold">
+        Lorem ipsum dolor
+      </h1>
+    </div>
+    <p class="md:text-lg text-slate-300">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
       sapiente sequi quo nesciunt facilis repellat, sint reiciendis cumque aut,
       modi incidunt totam exercitationem odit veritatis atque beatae commodi a

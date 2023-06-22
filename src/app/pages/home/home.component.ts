@@ -31,4 +31,45 @@ export class HomeComponent {
       clearInterval(this.myInterval);
     }
   }, 20);
+
+  scrollButtonClicked() {
+    const wrapper = document.getElementById('wrapper');
+    const scrollStep = window.innerHeight * 0.95;
+    const scrollDuration = 400; // milliseconds
+
+    const currentPosition = wrapper!.scrollTop;
+    const targetPosition = currentPosition + scrollStep;
+
+    this.animateScroll(
+      wrapper!,
+      currentPosition,
+      targetPosition,
+      scrollDuration
+    );
+  }
+  // Animate smooth scrolling
+  animateScroll(
+    element: HTMLElement,
+    currentPosition: number,
+    targetPosition: number,
+    duration: number
+  ) {
+    const startTime = new Date().getTime();
+    const endTime = startTime + duration;
+
+    const runAnimation = () => {
+      const timestamp = new Date().getTime();
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const newPosition =
+        currentPosition + (targetPosition - currentPosition) * progress;
+
+      element.scrollTop = newPosition;
+
+      if (timestamp < endTime) {
+        requestAnimationFrame(runAnimation);
+      }
+    };
+
+    runAnimation();
+  }
 }

@@ -10,6 +10,7 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 import { TeamComponent } from './pages/team/team.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { AccordianGalleryComponent } from './components/accordian-gallery/accordian-gallery.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ContactComponent } from './pages/contact/contact.component';
     TeamComponent,
     ProjectsComponent,
     ContactComponent,
+    AccordianGalleryComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
